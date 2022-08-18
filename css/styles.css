@@ -111,22 +111,22 @@ button {
 
 /* Хедер */
 
-.container-header {
+.header__container {
 	display: flex;
 	align-items: center;
 }
 
-.header-nav {
+.nav {
 	display: flex;
 	align-items: center;
 }
 
-.contacts-list {
+.contacts {
 	display: flex;
 	margin-left: auto;
 }
 
-.header-nav-list {
+.nav-list {
 	display: flex;
 	align-items: center;
 }
@@ -137,23 +137,23 @@ button {
 
 /* Логотип */
 
-.logo-web,
-.logo-studio {
+.logo__word-web,
+.logo__word-studio {
 	font-family: "Raleway", sans-serif;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.2;
 }
 
-.logo-web {
+.logo__word-web {
 	color: var(--accent-color);
 }
-.logo-studio {
+.logo__word-studio {
 	color: #000000;
 }
 
 /* Site-nav */
-.nav-link {
+.nav-list__link {
 	display: block;
 	padding-top: 32px;
 	padding-bottom: 32px;
@@ -167,22 +167,22 @@ button {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link.current {
+.nav-list__link--current {
 	color: var(--accent-color);
 }
 
-.nav-link:hover,
-.nav-link:focus {
+.nav-list__link:hover,
+.nav-list__link:focus {
 	color: var(--accent-color);
 }
 
-.contacts-list .link:hover,
-.contacts-list .link:focus {
+.contacts__link:hover,
+.contacts__link:focus {
 	color: var(--accent-color);
 }
 
 /* Контакти */
-.contacts-list-item .link {
+.contacts__link {
 	display: flex;
 	align-items: center;
 	padding-top: 32px;
@@ -197,13 +197,13 @@ button {
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.header-nav .logo-link {
+.header_logo {
 	margin-right: 93px;
 	padding-top: 24px;
 	padding-bottom: 25px;
 }
 
-.header-nav-list .nav-list-item + .nav-list-item {
+.nav-list__item:not(:first-child) {
 	margin-left: 50px;
 }
 
@@ -211,20 +211,15 @@ button {
 	display: block;
 }
 
-.contacts-list .contacts-list-item + .contacts-list-item {
+.contacts__item:not(:first-child) {
 	margin-left: 50px;
 }
 
-.contacts-list-item .icon {
-	width: 16px;
-	margin-right: 10px;
-}
-
-.nav-list-item {
+.nav-list__item {
 	position: relative;
 }
 
-.nav-list-item .current::after {
+.nav-list__link--current::after {
 	position: absolute;
 	bottom: -1px;
 	left: -2px;
@@ -237,12 +232,16 @@ button {
 	border-radius: 2px;
 }
 
+.contacts__icon {
+	margin-right: 10px;
+}
+
 /* Заголовки секцій і списків */
 
 /* ---------ГЕРОЙ--------- */
 
 .section-hero-title,
-.footer .logo-studio {
+.footer .logo__studio {
 	color: var(--third-text-color);
 }
 
