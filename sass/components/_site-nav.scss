@@ -1,0 +1,69 @@
+.site-nav {
+	@include centeredFlex($jc: flex-start);
+	@extend %list;
+
+	&__link {
+		display: block;
+		padding-top: 32px;
+		padding-bottom: 32px;
+		font-weight: 500;
+		letter-spacing: 0.02em;
+
+		color: $title-text-color;
+
+		@extend %link;
+		@include transition(color);
+	}
+
+	&__link--current {
+		color: $accent-color;
+	}
+
+	&__link--current::after {
+		position: absolute;
+		bottom: -1px;
+		left: -2px;
+		content: "";
+		display: block;
+		width: calc(100% + 4px);
+		height: 4px;
+
+		background-color: $accent-color;
+		border-radius: 2px;
+	}
+
+	&__link--no-current::after {
+		position: absolute;
+		bottom: -1px;
+		left: -2px;
+		content: "";
+		display: block;
+		width: calc(100% + 4px);
+		height: 4px;
+
+		transform: scaleX(0);
+
+		background-color: $accent-color;
+		border-radius: 2px;
+
+		@include transition(transform);
+	}
+
+	&__link:hover,
+	&__link:focus {
+		color: $accent-color;
+	}
+
+	&__link:hover.site-nav__link--no-current::after,
+	&__link:focus.site-nav__link--no-current::after {
+		transform: scaleX(1);
+	}
+
+	&__item:not(:first-child) {
+		margin-left: 50px;
+	}
+
+	&__item {
+		position: relative;
+	}
+}

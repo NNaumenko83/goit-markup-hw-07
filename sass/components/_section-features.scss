@@ -1,0 +1,37 @@
+.features-list__box-icon {
+	@include centeredFlex();
+
+	width: 270px;
+	height: 120px;
+	margin: 0 auto 30px;
+
+	background-color: $futures-images-background-color;
+	border-radius: 4px;
+}
+
+.features {
+	padding-bottom: 0;
+
+	&__title {
+		@extend %visually-hidden;
+	}
+}
+
+.features-list {
+	display: flex;
+
+	@extend %list;
+
+	&__text {
+		font-size: inherit;
+		line-height: 1.71;
+	}
+
+	&__item {
+		width: 270px;
+	}
+
+	&__item:not(:first-child) {
+		margin-left: 30px;
+	}
+}
