@@ -1,0 +1,32 @@
+.footer {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-color: $third-background-color;
+
+	&__container {
+		display: flex;
+		align-items: baseline;
+	}
+
+	&__logo {
+		margin-bottom: 20px;
+	}
+
+	&__adress-box {
+		margin-right: 70px;
+	}
+
+	&__text {
+		margin-bottom: 20px;
+
+		font-weight: 700;
+		line-height: 1.14;
+		text-transform: uppercase;
+
+		color: $third-text-color;
+	}
+
+	&__subscr {
+		margin-left: auto;
+	}
+}

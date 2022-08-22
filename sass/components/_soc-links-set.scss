@@ -20,7 +20,7 @@
 		color: $team-soc-link-color;
 		border-radius: 50%;
 
-		@include transition(all);
+		@extend %transition;
 	}
 
 	&__icon {
@@ -31,5 +31,10 @@
 	&__link:focus {
 		color: $third-text-color;
 		background-color: $accent-color;
+	}
+
+	&__link--white {
+		color: $third-text-color;
+		background-color: rgba(255, 255, 255, 0.1);
 	}
 }

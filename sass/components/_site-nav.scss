@@ -12,7 +12,7 @@
 		color: $title-text-color;
 
 		@extend %link;
-		@include transition(color);
+		@extend %transition;
 	}
 
 	&__link--current {
@@ -46,7 +46,7 @@
 		background-color: $accent-color;
 		border-radius: 2px;
 
-		@include transition(transform);
+		@extend %transition;
 	}
 
 	&__link:hover,

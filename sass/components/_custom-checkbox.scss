@@ -1,0 +1,60 @@
+.custom-checkbox {
+	display: flex;
+	align-items: center;
+
+	width: 425px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+
+	font-family: "Roboto";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 1.71;
+
+	letter-spacing: 0.03em;
+
+	color: #757575;
+
+	&__input {
+		position: absolute;
+
+		@extend %visually-hidden;
+	}
+
+	&__border {
+		width: 16px;
+		height: 15px;
+
+		@include centeredFlex();
+		margin-right: 8px;
+
+		border: 2px solid #212121;
+		border-radius: 2px;
+
+		cursor: pointer;
+
+		color: transparent;
+
+		@extend %transition;
+	}
+
+	&__icon {
+		fill: currentColor;
+
+		@extend %transition;
+	}
+
+	&__input:checked + &__border {
+		background-color: $accent-color;
+		border: none;
+		color: white;
+	}
+
+	&__link {
+		margin-left: 4px;
+		text-decoration-line: underline;
+		color: #2196f3;
+	}
+}

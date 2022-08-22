@@ -22,7 +22,7 @@
 
 		color: currentColor;
 
-		@include transition(color);
+		@extend %transition;
 	}
 
 	&__item:not(:first-child) {
@@ -30,6 +30,7 @@
 	}
 
 	&__icon {
+		@extend %icon;
 		margin-right: 10px;
 	}
 }
