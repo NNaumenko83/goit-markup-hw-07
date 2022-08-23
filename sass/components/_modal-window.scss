@@ -31,47 +31,38 @@
 
 	background-color: $main-background-color;
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+	border-radius: $main-border-radius;
 
 	@extend %transition;
 
 	.backdrop--is-hidden & {
 		transform: translate(-50%, -50%) scale(1.3);
 	}
+}
 
-	&__btn {
-		position: absolute;
-		top: 8px;
-		right: 8px;
+.modal__close-button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
 
-		@include centeredFlex;
+	@extend %transition;
 
-		width: 30px;
-		height: 30px;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 50%;
-
-		background-color: $main-background-color;
-
-		@extend %transition;
-	}
-
-	&__btn:hover,
-	&__btn:focus {
+	&:hover,
+	&:focus {
 		color: $accent-color;
 	}
+}
 
-	&__text {
-		text-align: center;
-		margin-bottom: 12px;
+.modal__text {
+	text-align: center;
+	margin-bottom: 12px;
 
-		font-weight: 700;
-		font-size: 20px;
-		line-height: 1.15;
-		color: $title-text-color;
-	}
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	color: $title-text-color;
+}
 
-	&__close-icon {
-		@extend %icon;
-	}
+.close-button__close-icon {
+	@extend %icon;
 }

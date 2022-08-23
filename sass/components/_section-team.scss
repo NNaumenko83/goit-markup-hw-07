@@ -1,50 +1,46 @@
 .team {
 	background-color: $secondary-background-color;
+}
 
-	&__title {
-		@extend %section-main-header;
-	}
+.team__main-title {
+	margin-bottom: 50px;
 }
 
 .team-list {
 	@extend %list;
 	display: flex;
+}
 
-	&__item {
-		width: 270px;
-		background-color: #ffffff;
-		box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-		border-radius: 0px 0px 4px 4px;
-	}
+.team-list__item {
+	flex-basis: calc((100% - 30px * 3) / 4);
 
-	&__title {
-		color: $title-text-color;
-		font-weight: 500;
-		font-size: 16px;
-		line-height: 1.19;
-		text-align: center;
-	}
+	width: 270px;
+	background-color: $main-background-color;
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 0px 0px 4px 4px;
 
-	&__text {
-		font-size: 16px;
-		line-height: 1.19;
-		text-align: center;
-		margin-bottom: 16px;
-	}
-
-	&__item:not(:last-child) {
+	&:not(:last-child) {
 		margin-right: 30px;
 	}
+}
 
-	&__title {
-		margin-bottom: 10px;
-	}
+.team-list__title {
+	margin-bottom: 10px;
 
-	&__item {
-		flex-basis: calc((100% - 30px * 3) / 4);
-	}
+	color: $title-text-color;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+}
 
-	&__card {
-		padding: 30px 0;
-	}
+.team-list__text {
+	font-size: 16px;
+	line-height: 1.19;
+	text-align: center;
+	margin-bottom: 16px;
+}
+
+.team-list__card {
+	padding: 30px 0;
 }

@@ -1,7 +1,7 @@
 body {
 	background-color: $main-background-color;
 	color: $primary-text-color;
-	font-family: Roboto, sans-serif;
-	letter-spacing: 0.03em;
-	font-size: 14px;
+	font-family: $main-font-family;
+	letter-spacing: $main-letter-spacing;
+	font-size: $main-font-size;
 }

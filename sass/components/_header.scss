@@ -1,7 +1,8 @@
 .header {
 	border-bottom: 1px solid $header-border-line-color;
-	&__container,
-	&__nav {
-		@include centeredFlex($jc: flex-start);
-	}
+}
+
+.header__container,
+.header__nav {
+	@include centeredFlex($jc: flex-start);
 }

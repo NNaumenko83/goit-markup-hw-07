@@ -1,11 +1,12 @@
+.custom-checkbox-box {
+	@include centeredFlex();
+	margin-top: 20px;
+	margin-bottom: 30px;
+}
+
 .custom-checkbox {
 	display: flex;
 	align-items: center;
-
-	width: 425px;
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 30px;
 
 	font-family: "Roboto";
 	font-style: normal;
@@ -16,45 +17,50 @@
 	letter-spacing: 0.03em;
 
 	color: #757575;
+}
 
-	&__input {
-		position: absolute;
+.custom-checkbox__input {
+	position: absolute;
 
-		@extend %visually-hidden;
+	@extend %visually-hidden;
+}
+
+.custom-checkbox__border {
+	width: 16px;
+	height: 15px;
+
+	@include centeredFlex();
+	margin-right: 8px;
+
+	border: 2px solid #212121;
+	border-radius: 2px;
+
+	cursor: pointer;
+
+	color: transparent;
+
+	@extend %transition;
+
+	.custom-checkbox:focus-within &,
+	.custom-checkbox:hover & {
+		border-color: $accent-color;
 	}
 
-	&__border {
-		width: 16px;
-		height: 15px;
-
-		@include centeredFlex();
-		margin-right: 8px;
-
-		border: 2px solid #212121;
-		border-radius: 2px;
-
-		cursor: pointer;
-
-		color: transparent;
-
-		@extend %transition;
-	}
-
-	&__icon {
-		fill: currentColor;
-
-		@extend %transition;
-	}
-
-	&__input:checked + &__border {
+	.custom-checkbox__input:checked + & {
 		background-color: $accent-color;
 		border: none;
-		color: white;
+		color: $accent-button-text-color;
 	}
+}
 
-	&__link {
-		margin-left: 4px;
-		text-decoration-line: underline;
-		color: #2196f3;
-	}
+.custom-checkbox__icon {
+	fill: currentColor;
+
+	@extend %transition;
+}
+
+.custom-checkbox__link {
+	margin-left: 4px;
+	text-decoration-line: underline;
+	color: #2196f3;
 }

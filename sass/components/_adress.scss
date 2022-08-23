@@ -4,25 +4,25 @@
 
 .adress-list {
 	@extend %list;
+}
 
-	&__item:not(:last-child) {
-		margin-bottom: 9px;
-	}
+.adress-list__item:not(:last-child) {
+	margin-bottom: 9px;
+}
 
-	&__link {
-		@extend %link;
-		@extend %transition;
-		color: $second-text-color;
-		font-size: inherit;
-		line-height: 1.71;
-	}
+.adress-list__link {
+	@extend %link;
+	@extend %transition;
+	color: $second-text-color;
+	font-size: inherit;
+	line-height: 1.71;
 
-	&__link--light {
+	&--light {
 		color: $third-text-color;
 	}
 
-	&__link:hover,
-	&__link:focus {
+	&:hover,
+	&:focus {
 		color: $accent-color;
 	}
 }

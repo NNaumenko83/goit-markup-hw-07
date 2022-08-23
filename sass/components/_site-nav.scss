@@ -1,25 +1,29 @@
 .site-nav {
 	@include centeredFlex($jc: flex-start);
 	@extend %list;
+}
 
-	&__link {
-		display: block;
-		padding-top: 32px;
-		padding-bottom: 32px;
-		font-weight: 500;
-		letter-spacing: 0.02em;
+.site-nav__link {
+	display: block;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	font-weight: 500;
+	letter-spacing: 0.02em;
 
-		color: $title-text-color;
+	color: $title-text-color;
 
-		@extend %link;
-		@extend %transition;
-	}
+	@extend %link;
+	@extend %transition;
 
-	&__link--current {
+	&:hover,
+	&:focus {
 		color: $accent-color;
 	}
 
-	&__link--current::after {
+	&--current {
+		color: $accent-color;
+	}
+	&--current::after {
 		position: absolute;
 		bottom: -1px;
 		left: -2px;
@@ -32,7 +36,7 @@
 		border-radius: 2px;
 	}
 
-	&__link--no-current::after {
+	&--no-current::after {
 		position: absolute;
 		bottom: -1px;
 		left: -2px;
@@ -49,21 +53,16 @@
 		@extend %transition;
 	}
 
-	&__link:hover,
-	&__link:focus {
-		color: $accent-color;
-	}
-
-	&__link:hover.site-nav__link--no-current::after,
-	&__link:focus.site-nav__link--no-current::after {
+	&:hover.site-nav__link--no-current::after,
+	&:focus.site-nav__link--no-current::after {
 		transform: scaleX(1);
 	}
+}
 
-	&__item:not(:first-child) {
+.site-nav__item {
+	position: relative;
+
+	&:not(:first-child) {
 		margin-left: 50px;
-	}
-
-	&__item {
-		position: relative;
 	}
 }

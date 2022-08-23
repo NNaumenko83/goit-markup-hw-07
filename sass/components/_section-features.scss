@@ -1,3 +1,7 @@
+.features {
+	padding-bottom: 0;
+}
+
 .features-list__box-icon {
 	@include centeredFlex();
 
@@ -6,41 +10,37 @@
 	margin: 0 auto 30px;
 
 	background-color: $futures-images-background-color;
-	border-radius: 4px;
+	border-radius: $main-border-radius;
 }
 
-.features {
-	padding-bottom: 0;
-
-	&__title {
-		@extend %visually-hidden;
-	}
+.features__title {
+	@extend %visually-hidden;
 }
 
 .features-list {
 	display: flex;
 
 	@extend %list;
+}
 
-	&__title {
-		margin-bottom: 10px;
-		color: $title-text-color;
-		font-weight: 700;
-		font-size: inherit;
-		line-height: 1.14;
-		text-transform: uppercase;
-	}
+.features-list__title {
+	margin-bottom: 10px;
+	color: $title-text-color;
+	font-weight: 700;
+	font-size: inherit;
+	line-height: 1.14;
+	text-transform: uppercase;
+}
 
-	&__text {
-		font-size: inherit;
-		line-height: 1.71;
-	}
+.features-list__text {
+	font-size: inherit;
+	line-height: 1.71;
+}
 
-	&__item {
-		width: 270px;
-	}
+.features-list__item {
+	width: 270px;
 
-	&__item:not(:first-child) {
+	&:not(:first-child) {
 		margin-left: 30px;
 	}
 }

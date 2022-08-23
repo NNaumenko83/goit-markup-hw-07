@@ -15,35 +15,37 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+}
 
-	&__title {
-		max-width: 696px;
+.hero__title {
+	max-width: 696px;
 
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
 
-		font-weight: 900;
-		font-size: 44px;
-		line-height: 1.36;
-		text-align: center;
-		letter-spacing: 0.06em;
-		text-transform: uppercase;
+	font-weight: 900;
+	font-size: 44px;
+	line-height: 1.36;
+	text-align: center;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
 
-		color: $third-text-color;
-	}
+	color: $third-text-color;
+}
 
-	&__btn {
-		padding: 10px 32px;
+.hero__btn {
+	@extend %button;
 
-		color: $accent-button-color;
-		font-weight: 700;
-		font-size: 16px;
-		line-height: 1.88;
+	padding: 10px 32px;
 
-		letter-spacing: 0.06em;
-		background-color: $accent-color;
+	color: $accent-button-text-color;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
 
-		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	}
+	letter-spacing: 0.06em;
+	background-color: $accent-color;
+
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

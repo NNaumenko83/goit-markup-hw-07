@@ -1,31 +1,31 @@
-.about__title {
-	@extend %section-main-header;
+.about__main-title {
+	margin-bottom: 50px;
 }
 
 .about-list {
 	@extend %list;
 	@include centeredFlex($jc: space-between);
+}
 
-	&__item {
-		position: relative;
-	}
+.about-list__item {
+	position: relative;
+}
 
-	&__text {
-		position: absolute;
+.about-list__text {
+	position: absolute;
 
-		@include centeredFlex();
+	@include centeredFlex();
 
-		left: 0;
-		bottom: 0;
+	left: 0;
+	bottom: 0;
 
-		width: 100%;
-		height: 70px;
+	width: 100%;
+	height: 70px;
 
-		font-weight: 700;
-		line-height: 1.14;
-		text-transform: uppercase;
+	font-weight: 700;
+	line-height: 1.14;
+	text-transform: uppercase;
 
-		color: $third-text-color;
-		background-color: rgba(47, 48, 58, 0.8);
-	}
+	color: $third-text-color;
+	background-color: rgba(47, 48, 58, 0.8);
 }

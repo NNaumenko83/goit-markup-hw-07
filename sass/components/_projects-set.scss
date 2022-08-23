@@ -3,93 +3,93 @@
 
 	display: flex;
 	flex-wrap: wrap;
+}
 
-	&__label {
-		padding: 20px 24px;
-		border: 1px solid $cards-border-color;
-		border-top: none;
-	}
+.projects-set__label {
+	padding: 20px 24px;
+	border: 1px solid $cards-border-color;
+	border-top: none;
+}
 
-	&__name {
-		margin-bottom: 4px;
+.projects-set__name {
+	margin-bottom: 4px;
 
-		color: $title-text-color;
-		font-weight: 700;
-		font-size: 18px;
-		line-height: 2;
-		letter-spacing: 0.06em;
-	}
+	color: $title-text-color;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 2;
+	letter-spacing: 0.06em;
+}
 
-	&__type {
-		color: $primary-text-color;
-		font-size: 16px;
-		line-height: 1.88;
-	}
+.projects-set__type {
+	color: $primary-text-color;
+	font-size: 16px;
+	line-height: 1.88;
+}
 
-	&__item {
-		width: calc((100% - 60px) / 3);
-		margin-right: 30px;
+.projects-set__item {
+	width: calc((100% - 60px) / 3);
+	margin-right: 30px;
 
-		background-color: $main-background-color;
-	}
+	background-color: $main-background-color;
 
-	&__item:nth-child(3n) {
+	&:nth-child(3n) {
 		margin-right: 0;
 	}
 
-	&__item:not(:nth-last-child(-n + 3)) {
+	&:not(:nth-last-child(-n + 3)) {
 		margin-bottom: 30px;
 	}
+}
 
-	&__link {
-		@extend %link;
+.projects-set__link {
+	@extend %link;
 
-		display: block;
+	display: block;
 
-		@extend %transition;
-	}
+	@extend %transition;
 
-	&__link:hover,
-	&__link:focus {
+	&:hover,
+	&:focus {
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 	}
+}
 
-	&__box {
-		position: relative;
+.projects-set__box {
+	position: relative;
 
-		overflow: hidden;
-	}
+	overflow: hidden;
+}
 
-	&__text {
-		position: absolute;
+.projects-set__text {
+	position: absolute;
 
-		display: flex;
-		align-items: center;
+	display: flex;
+	align-items: center;
 
-		bottom: 0;
-		left: 0;
+	bottom: 0;
+	left: 0;
 
-		width: 100%;
-		height: 100%;
+	width: 100%;
+	height: 100%;
 
-		padding-left: 24px;
-		padding-right: 24px;
+	padding-left: 24px;
+	padding-right: 24px;
 
-		font-size: 18px;
-		line-height: 1.56;
-		letter-spacing: 0.03em;
+	font-size: 18px;
+	line-height: 1.56;
+	letter-spacing: 0.03em;
 
-		color: $third-text-color;
+	color: $third-text-color;
 
-		background-color: $project-set-card-background-color;
+	background-color: $project-set-card-background-color;
 
-		transform: translateY(100%);
+	transform: translateY(100%);
 
-		@extend %transition;
-	}
+	@extend %transition;
 
-	&__link:hover &__text,
-	&__link:focus &__text {
+	.projects-set__link:hover &,
+	.projects-set__link:focus & {
 		transform: translateY(0);
 	}
 }

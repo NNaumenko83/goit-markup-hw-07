@@ -1,5 +1,3 @@
-.portfolio {
-	&__title {
-		@extend %visually-hidden;
-	}
+.portfolio__title {
+	@extend %visually-hidden;
 }

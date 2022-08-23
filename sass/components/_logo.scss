@@ -2,30 +2,30 @@
 	@extend %link;
 
 	display: block;
-	font-family: $logo-font-family;
+	font-family: $second-font-family;
 	font-weight: 700;
 	font-size: 26px;
 	line-height: 1.2;
+}
 
-	&__word-web {
-		color: $logo-first-color;
-	}
+.logo__word-web {
+	color: $logo-first-color;
+}
 
-	&__word-studio {
-		color: $logo-second-color;
-	}
+.logo__word-studio {
+	color: $logo-second-color;
 
-	&.header_logo {
-		margin-right: 93px;
-		padding-top: 24px;
-		padding-bottom: 25px;
-	}
-
-	&__link {
-		display: block;
-	}
-
-	&__word-studio--inverse {
+	&--inverse {
 		color: $logo-second-color-inverse;
 	}
+}
+
+.header_logo {
+	margin-right: 93px;
+	padding-top: 24px;
+	padding-bottom: 25px;
+}
+
+.logo__link {
+	display: block;
 }

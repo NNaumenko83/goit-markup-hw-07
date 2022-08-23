@@ -1,42 +1,39 @@
-.clients__title {
-	@extend %section-main-header;
+.clients__main-title {
+	margin-bottom: 50px;
 }
 
-/* ---------НАША КОМАНДА--------- */
-
-/* -----------------ПОСТІЙНІ КЛІЄНТИ----------------- */
 .clients-list {
 	@extend %list;
 
 	display: flex;
 	gap: 30px;
+}
 
-	&__item {
-		width: 170px;
-		height: 92px;
-	}
+.clients-list__item {
+	width: 170px;
+	height: 92px;
+}
 
-	&__icon {
-		@extend %icon;
-	}
+.clients-list__icon {
+	@extend %icon;
+}
 
-	&__link {
-		display: flex;
-		width: 100%;
-		height: 100%;
+.clients-list__link {
+	display: flex;
+	width: 100%;
+	height: 100%;
 
-		color: $company-list-color;
-		border: 1px solid $company-list-color-border;
-		border-radius: 4px;
+	color: $company-list-color;
+	border: 1px solid $company-list-color-border;
+	border-radius: $main-border-radius;
 
-		justify-content: center;
-		align-items: center;
+	justify-content: center;
+	align-items: center;
 
-		@extend %transition;
-	}
+	@extend %transition;
 
-	&__link:hover,
-	&__link:focus {
+	&:hover,
+	&:focus {
 		color: $accent-color;
 		border: 1px solid $accent-color;
 	}

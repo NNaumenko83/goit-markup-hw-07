@@ -13,22 +13,23 @@
 	line-height: 1.88;
 	letter-spacing: 0.06em;
 
-	color: $accent-button-color;
+	color: $accent-button-text-color;
 
 	background-color: $accent-color;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	.modal-form & {
-		margin: 0 auto;
-		@extend %transition;
-	}
+}
 
-	.modal-form &:hover,
-	.modal-form &:focus {
+.modal-form__submit-btn {
+	margin: 0 auto;
+	@extend %transition;
+
+	&:hover,
+	&:focus {
 		background-color: $modal-btn-submit-focus-color;
 	}
+}
 
-	&__icon {
-		@extend %icon;
-		margin-left: 10px;
-	}
+.submit-btn__icon {
+	@extend %icon;
+	margin-left: 10px;
 }
